@@ -23,6 +23,7 @@
 // використовуй властивість elements.
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів
 // форми методом reset.
+
 'use strict';
 
 const formEl = document.querySelector('form');
@@ -37,8 +38,14 @@ function handleSubmit(e) {
         alert('Всі поля мають бути заповненні!');
     }
 
- console.log(`Email: ${email.value}, Password: ${password.value}`);
-  e.target.reset();
+    const obj = {
+        email: email.value,
+        password: password.value,
+    }
+    
+    console.log(obj);
+    e.target.reset();
 };
 
 formEl.addEventListener('submit', handleSubmit);
+

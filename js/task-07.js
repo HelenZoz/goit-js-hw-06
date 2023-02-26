@@ -11,6 +11,6 @@
 const inputEl = document.querySelector('input');
 const spanEl = document.querySelector('span')
 
-inputEl.addEventListener('change', e => {
+inputEl.addEventListener('input', e => {
 console.log(spanEl.style.fontSize = `${e.target.value}px`);
 });

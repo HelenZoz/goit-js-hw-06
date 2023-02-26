@@ -9,11 +9,13 @@
 
 // Для генерування випадкового кольору використовуй функцію
 // getRandomHexColor.
-'use strict';
+// 'use strict';
 
 const spanEl = document.querySelector('span');
 const btnEl = document.querySelector('button');
 const bodyEl = document.querySelector('body');
+
+console.log(spanEl)
 
 function handleRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -21,15 +23,14 @@ function handleRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-let randomColor = handleRandomHexColor(); 
-console.log(randomColor);
-
-btnEl.addEventListener('click', e => {
-  console.log("Button was clicked");
-  spanEl.textContent = `${randomColor}`;
-  bodyEl.style.backgroundColor = `${randomColor}`;
-});
-
+btnEl.addEventListener('click', ClickColor);
+  
+function ClickColor() {
+  console.log("Click");
+  spanEl.textContent =
+    bodyEl.style.backgroundColor =
+    handleRandomHexColor();
+};
 
 
 
